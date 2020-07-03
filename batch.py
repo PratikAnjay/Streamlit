@@ -48,7 +48,7 @@ def main():
         Experience = st.number_input("Experience",min_value=1,max_value=100,value=3)
         Income = st.text_input("Income","Type Here")
         Family = st.selectbox("Family",[0,1,2,3,4,5,6,7,8,9,10])
-        Education = st.text_input("Education","Type Here")
+        Education = st.selectbox("Education",[1,2,3])
         Mortgage = st.text_input("Mortgage","Type Here")
         CreditCard = st.selectbox("CreditCard",['0','1'])
         result=""
