@@ -39,7 +39,7 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     from PIL import Image
-    image_loan=Image.open("C:/Users/pratik.anjay/Documents/ML practice/LP1.jpg")
+    image_loan=Image.open("LP1.jpg")
     choose_model=st.sidebar.selectbox(label='How would you like to predict?', options=['Online','Batch'])
     st.sidebar.title("Check your Loan Eligiblity")
     st.sidebar.image(image_loan,use_column_width=True)
