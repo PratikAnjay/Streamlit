@@ -5,7 +5,7 @@ import streamlit as st
 import base64
 #import altair as alt
 
-f1 = pd.read_csv('C:/Users/pratik.anjay/Documents/ML practice/PyCaret-Example-master/PyCaret-Example-master/datasets/loan_train_data.csv')
+f1 = pd.read_csv('loan_train_data.csv')
 x=f1[['Age','Experience','Income','Family','Education','Mortgage','CreditCard']]
 y=f1['Personal Loan']
 from sklearn.model_selection import train_test_split
