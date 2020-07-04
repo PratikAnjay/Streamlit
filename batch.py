@@ -72,6 +72,22 @@ def main():
             b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
             href = f'<a href="data:file/csv;base64,{b64}">Download Test Set Predictions CSV File</a> (right-click and save as &lt;some_name&gt;.csv)'
             st.markdown(href, unsafe_allow_html=True)
+            display_df = st.checkbox(label='Visualize the Predicted Value')
+            
+            if display_df:
+                st.bar_chart(data['Prediction'].value_counts())
+                st.text(data['Prediction'].value_counts())  
+            
+            
+            
+            hide_st_style = """
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+    </style>
+"""
+            
+            st.markdown(hide_st_style, unsafe_allow_html=True)
             
                       
 if __name__=='__main__':
