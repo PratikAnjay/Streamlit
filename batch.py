@@ -73,6 +73,7 @@ def main():
             data=pd.read_csv(file_upload)
             predictions=classifier.predict(data)
             data['Prediction'] = predictions
+            st.subheader("Find the Predicted Results below :")
             st.write(data)
             st.text("0 : Not Eligible for Personal Loan")
             st.text("1 : Eligible for Personal Loan")
@@ -81,7 +82,7 @@ def main():
             b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
             href = f'<a href="data:file/csv;base64,{b64}">Download Test Set Predictions CSV File</a> (right-click and save as &lt;some_name&gt;.csv)'
             st.markdown(href, unsafe_allow_html=True)
-            display_df = st.checkbox(label='Visualize the Predicted Value')
+            display_df = st.checkbox(label='Visualize the Predicted Results')
             
             if display_df:
                 st.bar_chart(data['Prediction'].value_counts())
