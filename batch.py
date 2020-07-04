@@ -58,7 +58,7 @@ def main():
             st.text("0 : Not Eligible for Personal Loan")
             st.text("1 : Eligible for Personal Loan")
             
-         hide_st_style = """
+          hide_st_style = """
     <style>
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
