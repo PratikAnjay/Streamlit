@@ -64,7 +64,7 @@ def main():
     </style>
 """
             
-           st.markdown(hide_st_style, unsafe_allow_html=True)
+          st.markdown(hide_st_style, unsafe_allow_html=True)
             
     if (choose_model=='Batch'):
         file_upload=st.file_uploader("Upload csv file for Predictions",type=["csv"])
